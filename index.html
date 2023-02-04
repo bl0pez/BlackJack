@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ -->
+</head>
+<body>
+    
+    <header>
+        <h1>BlackJack</h1>
+    </header>
+
+    <div class="content">
+        <button id="btnNuevo" class="btn">Nuevo juego</button>
+        <button id="btnPedir" disabled="disabled" class="btn">Pedir carta</button>
+        <button id="btnDetener" disabled="disabled" class="btn">Detener</button>
+    </div>
+
+    <div class="content-main">
+        <div>
+            <h2>Jugaodor - <small>0</small></h2>
+
+            <div id="jugador-cartas" class="divCartas"></div>
+
+        </div>
+    </div>
+
+    <div class="content-main">
+        <div>
+            <h2>Computadora - <small>0</small></h2>
+
+            <div id="computadora-cartas" class="divCartas">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./assets/js/juego.js"></script>
+    <script>
+        document.querySelector('#btnNuevo').addEventListener('click', () => {
+            miModulo.nuevoJuego();
+        });
+    </script>
+</body>
+</html>
